@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Portfolio Website - Showcasing my projects, experience, and skills">
+    <meta name="keywords" content="portfolio, developer, web developer, software engineer">
+    <meta name="author" content="Your Name">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Particle Canvas Background -->
+    <canvas id="particle-canvas"></canvas>
+    
+    <!-- Animated Gradient Orbs -->
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+    
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <div class="cursor-trail" id="cursor-trail"></div>
+    
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home" class="logo-3d">Portfolio</a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#education" class="nav-link">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#certifications" class="nav-link">Certifications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home/Introduction Section -->
+    <section id="home" class="home-section">
+        <div class="animated-bg-gradient"></div>
+        <div class="home-container">
+            <div class="home-content">
+                <div class="home-text">
+                    <h1 class="home-title animated-gradient-text">
+                        Hi, I'm <span class="highlight rainbow-text">Your Name</span>
+                    </h1>
+                    <h2 class="home-subtitle typing-text">Software Developer | Web Developer</h2>
+                    <p class="home-description">
+                        Passionate developer with expertise in building scalable web applications 
+                        and delivering high-quality software solutions.
+                    </p>
+                    <div class="home-buttons">
+                        <a href="#contact" class="btn btn-primary neon-btn">
+                            <span class="btn-text">Get In Touch</span>
+                            <span class="btn-glow"></span>
+                        </a>
+                        <a href="resume.pdf" class="btn btn-secondary glass-btn" download>
+                            <i class="fas fa-download"></i> <span>Download Resume</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="home-image">
+                    <div class="image-wrapper-3d">
+                        <div class="image-glow"></div>
+                        <img src="https://via.placeholder.com/400x400" alt="Your Name" class="profile-img-3d">
+                        <div class="floating-particles"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about" class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section section">
+        <div class="section-bg-animated"></div>
+        <div class="container">
+            <h2 class="section-title animated-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I am a passionate software developer with a strong foundation in web development 
+                        and a keen interest in creating innovative solutions. With experience in various 
+                        technologies and frameworks, I enjoy tackling complex problems and turning ideas 
+                        into reality.
+                    </p>
+                    <p>
+                        My journey in software development has been driven by curiosity and a desire to 
+                        continuously learn and grow. I believe in writing clean, maintainable code and 
+                        following best practices to deliver high-quality software.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item glass-card">
+                            <div class="stat-glow"></div>
+                            <h3 class="counter" data-target="50">0</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat-item glass-card">
+                            <div class="stat-glow"></div>
+                            <h3 class="counter" data-target="3">0</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-item glass-card">
+                            <div class="stat-glow"></div>
+                            <h3 class="counter" data-target="20">0</h3>
+                            <p>Technologies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section section">
+        <div class="section-bg-animated"></div>
+        <div class="container">
+            <h2 class="section-title animated-title">Work Experience</h2>
+            <div class="timeline timeline-3d">
+                <div class="timeline-item">
+                    <div class="timeline-marker neon-marker">
+                        <div class="marker-pulse"></div>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <h3>Senior Software Developer</h3>
+                            <span class="timeline-date">2022 - Present</span>
+                        </div>
+                        <h4 class="timeline-company">Company Name</h4>
+                        <p class="timeline-description">
+                            Led development of scalable web applications using modern frameworks. 
+                            Collaborated with cross-functional teams to deliver high-quality software solutions. 
+                            Mentored junior developers and contributed to architectural decisions.
+                        </p>
+                        <ul class="timeline-tasks">
+                            <li>Developed and maintained multiple web applications</li>
+                            <li>Improved application performance by 40%</li>
+                            <li>Implemented CI/CD pipelines</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker neon-marker">
+                        <div class="marker-pulse"></div>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <h3>Software Developer</h3>
+                            <span class="timeline-date">2020 - 2022</span>
+                        </div>
+                        <h4 class="timeline-company">Previous Company</h4>
+                        <p class="timeline-description">
+                            Developed and maintained web applications using various technologies. 
+                            Worked on both frontend and backend development, ensuring optimal user experience.
+                        </p>
+                        <ul class="timeline-tasks">
+                            <li>Built responsive web interfaces</li>
+                            <li>Integrated third-party APIs</li>
+                            <li>Fixed bugs and improved code quality</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker neon-marker">
+                        <div class="marker-pulse"></div>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <h3>Junior Developer</h3>
+                            <span class="timeline-date">2019 - 2020</span>
+                        </div>
+                        <h4 class="timeline-company">First Company</h4>
+                        <p class="timeline-description">
+                            Started my professional journey as a junior developer, learning best practices 
+                            and contributing to team projects.
+                        </p>
+                        <ul class="timeline-tasks">
+                            <li>Assisted in feature development</li>
+                            <li>Participated in code reviews</li>
+                            <li>Learned modern development practices</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section section">
+        <div class="section-bg-animated"></div>
+        <div class="container">
+            <h2 class="section-title animated-title">Education</h2>
+            <div class="education-grid">
+                <div class="education-card glass-card card-3d">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Bachelor of Science in Computer Science</h3>
+                        <h4>University Name</h4>
+                        <span class="education-date">2015 - 2019</span>
+                        <p>
+                            Graduated with honors. Focused on software engineering, algorithms, 
+                            and web development. Relevant coursework included data structures, 
+                            database systems, and software engineering principles.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>High School Diploma</h3>
+                        <h4>High School Name</h4>
+                        <span class="education-date">2011 - 2015</span>
+                        <p>
+                            Completed high school with focus on mathematics and science. 
+                            Participated in various coding competitions and tech clubs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section section">
+        <div class="section-bg-animated"></div>
+        <div class="container">
+            <h2 class="section-title animated-title">My Projects</h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card card-3d glass-card" data-category="web">
+                    <div class="card-glow"></div>
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250" alt="Project 1">
+                        <div class="project-overlay animated-gradient-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/yourusername/project1" target="_blank" class="project-link neon-link" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                    <span class="link-glow"></span>
+                                </a>
+                                <a href="https://project1-demo.com" target="_blank" class="project-link neon-link" aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span class="link-glow"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>
+                            A full-featured e-commerce platform with user authentication, 
+                            product management, shopping cart, and payment integration.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag animated-tag">React</span>
+                            <span class="tag animated-tag">Node.js</span>
+                            <span class="tag animated-tag">MongoDB</span>
+                            <span class="tag animated-tag">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card card-3d glass-card" data-category="fullstack">
+                    <div class="card-glow"></div>
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250" alt="Project 2">
+                        <div class="project-overlay animated-gradient-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/yourusername/project2" target="_blank" class="project-link neon-link" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                    <span class="link-glow"></span>
+                                </a>
+                                <a href="https://project2-demo.com" target="_blank" class="project-link neon-link" aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span class="link-glow"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Task Management App</h3>
+                        <p>
+                            A collaborative task management application with real-time updates, 
+                            team collaboration features, and project tracking.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag animated-tag">Vue.js</span>
+                            <span class="tag animated-tag">Express</span>
+                            <span class="tag animated-tag">PostgreSQL</span>
+                            <span class="tag animated-tag">Socket.io</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card card-3d glass-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250" alt="Project 3">
+                        <div class="project-overlay animated-gradient-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/yourusername/project3" target="_blank" class="project-link neon-link" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                    <span class="link-glow"></span>
+                                </a>
+                                <a href="https://project3-demo.com" target="_blank" class="project-link neon-link" aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span class="link-glow"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Weather Dashboard</h3>
+                        <p>
+                            A responsive weather dashboard that displays current weather conditions 
+                            and forecasts for multiple locations using weather APIs.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag animated-tag">JavaScript</span>
+                            <span class="tag animated-tag">CSS3</span>
+                            <span class="tag animated-tag">API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card card-3d glass-card" data-category="mobile">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250" alt="Project 4">
+                        <div class="project-overlay animated-gradient-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/yourusername/project4" target="_blank" class="project-link neon-link" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                    <span class="link-glow"></span>
+                                </a>
+                                <a href="https://project4-demo.com" target="_blank" class="project-link neon-link" aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span class="link-glow"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Fitness Tracker App</h3>
+                        <p>
+                            A mobile application for tracking workouts, setting fitness goals, 
+                            and monitoring progress with data visualization.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag animated-tag">React Native</span>
+                            <span class="tag animated-tag">Firebase</span>
+                            <span class="tag animated-tag">Redux</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card card-3d glass-card" data-category="fullstack">
+                    <div class="card-glow"></div>
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250" alt="Project 5">
+                        <div class="project-overlay animated-gradient-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/yourusername/project5" target="_blank" class="project-link neon-link" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                    <span class="link-glow"></span>
+                                </a>
+                                <a href="https://project5-demo.com" target="_blank" class="project-link neon-link" aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span class="link-glow"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Blog Platform</h3>
+                        <p>
+                            A modern blog platform with rich text editing, comment system, 
+                            user authentication, and admin dashboard.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag animated-tag">Next.js</span>
+                            <span class="tag animated-tag">TypeScript</span>
+                            <span class="tag animated-tag">Prisma</span>
+                            <span class="tag animated-tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card card-3d glass-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250" alt="Project 6">
+                        <div class="project-overlay animated-gradient-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/yourusername/project6" target="_blank" class="project-link neon-link" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                    <span class="link-glow"></span>
+                                </a>
+                                <a href="https://project6-demo.com" target="_blank" class="project-link neon-link" aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span class="link-glow"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>
+                            A responsive portfolio website showcasing projects, skills, 
+                            and experience with smooth animations and modern design.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag animated-tag">HTML5</span>
+                            <span class="tag animated-tag">CSS3</span>
+                            <span class="tag animated-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section section">
+        <div class="section-bg-animated"></div>
+        <div class="container">
+            <h2 class="section-title animated-title">Skills</h2>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3 class="skills-category-title">
+                        <i class="fas fa-code"></i> Frontend
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML5</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress animated-gradient-bar" data-width="95"></div>
+                                <div class="skill-glow"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">CSS3</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">React</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Vue.js</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3 class="skills-category-title">
+                        <i class="fas fa-server"></i> Backend
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Express</span>
+                                <span class="skill-percentage">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="82"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">MongoDB</span>
+                                <span class="skill-percentage">78%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="78"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PostgreSQL</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3 class="skills-category-title">
+                        <i class="fas fa-tools"></i> Tools & Others
+                    </h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Jest</span>
+                        <span class="skill-tag">Webpack</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">GraphQL</span>
+                        <span class="skill-tag">Agile</span>
+                        <span class="skill-tag">Scrum</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section section">
+        <div class="section-bg-animated"></div>
+        <div class="container">
+            <h2 class="section-title animated-title">Certifications</h2>
+            <div class="certifications-grid">
+                <div class="certification-card glass-card card-3d">
+                    <div class="certification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>AWS Certified Solutions Architect</h3>
+                        <h4>Amazon Web Services</h4>
+                        <span class="certification-date">2023</span>
+                        <a href="#" class="certification-link" target="_blank">
+                            View Certificate <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="certification-card glass-card card-3d">
+                    <div class="certification-icon neon-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>Meta Front-End Developer</h3>
+                        <h4>Coursera</h4>
+                        <span class="certification-date">2022</span>
+                        <a href="#" class="certification-link" target="_blank">
+                            View Certificate <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="certification-card glass-card card-3d">
+                    <div class="certification-icon neon-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>JavaScript Algorithms and Data Structures</h3>
+                        <h4>freeCodeCamp</h4>
+                        <span class="certification-date">2021</span>
+                        <a href="#" class="certification-link" target="_blank">
+                            View Certificate <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="certification-card glass-card card-3d">
+                    <div class="certification-icon neon-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>React - The Complete Guide</h3>
+                        <h4>Udemy</h4>
+                        <span class="certification-date">2021</span>
+                        <a href="#" class="certification-link" target="_blank">
+                            View Certificate <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section">
+        <div class="section-bg-animated"></div>
+        <div class="container">
+            <h2 class="section-title animated-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-description">
+                        I'm always open to discussing new opportunities, interesting projects, 
+                        or just having a chat. Feel free to reach out!
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon neon-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <a href="mailto:your.email@example.com">your.email@example.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>LinkedIn</h4>
+                                <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link neon-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                            <span class="link-glow"></span>
+                        </a>
+                        <a href="https://github.com/yourusername" target="_blank" class="social-link neon-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                            <span class="link-glow"></span>
+                        </a>
+                        <a href="https://twitter.com/yourusername" target="_blank" class="social-link neon-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                            <span class="link-glow"></span>
+                        </a>
+                        <a href="mailto:your.email@example.com" class="social-link neon-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                            <span class="link-glow"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary neon-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-glow"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+            <p>Built with <i class="fas fa-heart"></i> using HTML, CSS, and JavaScript</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize GSAP ScrollTrigger
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+            gsap.registerPlugin(ScrollTrigger);
+        }
+    </script>
+</body>
+</html>
+
+
+
